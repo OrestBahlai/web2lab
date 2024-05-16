@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* Підключаємо шрифт з Google Fonts */
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+.user-dialog {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  width: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+.user-dialog h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.user-dialog form {
+  display: flex;
+  flex-direction: column;
+}
+.user-dialog form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.user-dialog form .form-group label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.user-dialog form .form-group input {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+.user-dialog form .form-group input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.user-dialog form .form-group select {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+.user-dialog form .form-group select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.user-dialog form .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.user-dialog form .buttons .btn-ok {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #4caf50;
+  color: #fff;
+}
+.user-dialog form .buttons .btn-ok:hover {
+  background-color: #388e3c;
+}
+.user-dialog form .buttons .btn-cancel {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #e0e0e0;
+  color: #333;
+}
+.user-dialog form .buttons .btn-cancel:hover {
+  background-color: #bdbdbd;
+}/*# sourceMappingURL=styles_signup.css.map */

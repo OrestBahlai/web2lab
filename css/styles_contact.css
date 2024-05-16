@@ -1,0 +1,149 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  height: 120px;
+  display: flex;
+  justify-content: space-between; /* Рівномірно розподіляємо елементи по ширині */
+  align-items: center; /* Вирівнюємо елементи по вертикалі */
+}
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Вирівнюємо текст по правому краю */
+}
+nav li {
+  display: inline-block;
+  margin-right: 20px; /* Задаємо відстань між елементами тепер зправа */
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#contact-us {
+  margin-left: auto; /* Розташовуємо "Contact us" справа */
+}
+
+#products, #home {
+  display: inline-block;
+  margin-left: 20px; /* Задаємо відстань між "Products" та "Home" */
+}
+
+main {
+  padding: 20px;
+}
+
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-info h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.contact-info ul {
+  padding-left: 20px;
+}
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+#contact-form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contact-form h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+#contact-form input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#contact-form input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+}
+#contact-form button[type=submit] {
+  background-color: #12c064;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#contact-form button[type=submit]:hover {
+  background-color: #00a74f;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+#success-message {
+  display: none;
+  background-color: #12c064;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+#success-message:target {
+  display: block;
+}/*# sourceMappingURL=styles_contact.css.map */

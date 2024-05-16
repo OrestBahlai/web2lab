@@ -1,0 +1,105 @@
+$color_1: #333;
+$color_2: #fff;
+$font-family_1: 'Roboto', sans-serif;
+$background-color_1: #fff;
+$background-color_2: #4caf50;
+$background-color_3: #388e3c;
+$background-color_4: #e0e0e0;
+$background-color_5: #bdbdbd;
+$border-color_1: #4caf50;
+
+/* Підключаємо шрифт з Google Fonts */
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+.user-dialog {
+	background-color: $background-color_1;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	width: 30rem;
+	max-width: 100%;
+	margin: 0 auto;
+	font-family: $font-family_1;
+	h1 {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		.form-group {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1rem;
+			label {
+				font-size: 1.2rem;
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+			}
+			input {
+				padding: 0.5rem;
+				border: 2px solid #ccc;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-family: $font-family_1;
+				color: $color_1;
+				&:focus {
+					outline: none;
+					border-color: $border-color_1;
+				}
+			}
+			select {
+				padding: 0.5rem;
+				border: 2px solid #ccc;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-family: $font-family_1;
+				color: $color_1;
+				&:focus {
+					outline: none;
+					border-color: $border-color_1;
+				}
+			}
+		}
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 2rem;
+			.btn-ok {
+				padding: 0.5rem 1.5rem;
+				border: none;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				display: inline-block;
+				text-align: center;
+				transition: background-color 0.2s ease-in-out;
+				background-color: $background-color_2;
+				color: $color_2;
+				&:hover {
+					background-color: $background-color_3;
+				}
+			}
+			.btn-cancel {
+				padding: 0.5rem 1.5rem;
+				border: none;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: none;
+				display: inline-block;
+				text-align: center;
+				transition: background-color 0.2s ease-in-out;
+				background-color: $background-color_4;
+				color: $color_1;
+				&:hover {
+					background-color: $background-color_5;
+				}
+			}
+		}
+	}
+}

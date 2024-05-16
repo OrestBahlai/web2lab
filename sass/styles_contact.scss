@@ -1,0 +1,155 @@
+$color_1: #333;
+$color_2: #fff;
+$font-family_1: Arial, sans-serif;
+$background-color_1: #f4f4f4;
+$background-color_2: #333;
+$background-color_3: #fff;
+$background-color_4: #12c064;
+$background-color_5: #00a74f;
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: $font-family_1;
+	font-size: 18px;
+	line-height: 1.6;
+	color: $color_1;
+	background-color: $background-color_1;
+}
+
+header {
+    background-color: $background-color_2;
+    color: $color_2;
+    padding: 20px;
+    text-align: left;
+    height: 120px;
+    display: flex;
+    justify-content: space-between; /* Рівномірно розподіляємо елементи по ширині */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    h1 {
+        margin: 0;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Вирівнюємо текст по правому краю */
+    }
+    li {
+        display: inline-block;
+        margin-right: 20px; /* Задаємо відстань між елементами тепер зправа */
+    }
+    a {
+        color: $color_2;
+        text-decoration: none;
+    }
+}
+
+#contact-us {
+    margin-left: auto; /* Розташовуємо "Contact us" справа */
+}
+
+#products, #home {
+    display: inline-block;
+    margin-left: 20px; /* Задаємо відстань між "Products" та "Home" */
+}
+
+
+main {
+	padding: 20px;
+}
+.contact-info {
+	background-color: $background-color_3;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	h2 {
+		margin-bottom: 10px;
+		color: $color_1;
+	}
+	ul {
+		padding-left: 20px;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+}
+#contact-form {
+	background-color: $background-color_3;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	h2 {
+		margin-bottom: 10px;
+		color: $color_1;
+	}
+	label {
+		display: block;
+		margin-bottom: 5px;
+		color: $color_1;
+	}
+	input[type="text"] {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+	input[type="email"] {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+	textarea {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 16px;
+		resize: vertical;
+		min-height: 100px;
+	}
+	button[type="submit"] {
+		background-color: $background-color_4;
+		color: $color_2;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		text-transform: uppercase;
+		&:hover {
+			background-color: $background-color_5;
+		}
+	}
+}
+footer {
+	background-color: $background-color_2;
+	color: $color_2;
+	text-align: center;
+	padding: 20px;
+}
+#success-message {
+	display: none;
+	background-color: $background-color_4;
+	color: $color_2;
+	text-align: center;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 20px;
+	&:target {
+		display: block;
+	}
+}

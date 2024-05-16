@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGI BuildMart - Products</title>
+    <link rel="stylesheet" href="css/styles_products.css">
+    <link rel="stylesheet" href="css/styles_cart.css">
+    <script>
+        // Функція для фільтрації за категоріями
+        function filterProducts(category) {
+            var products = document.querySelectorAll('.product');
+            products.forEach(function(product) {
+                var productCategory = product.getAttribute('data-category');
+                if (category === 'all' || productCategory === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            })
+        }
+
+        // Функція для сортування за ціною
+        function sortProductsByPrice(order) {
+            var productsContainer = document.querySelector('#products-container');
+            var products = Array.from(productsContainer.querySelectorAll('.product'));
+            products.sort(function(a, b) {
+                var priceA = parseFloat(a.querySelector('p').textContent.split(' ')[0]);
+                var priceB = parseFloat(b.querySelector('p').textContent.split(' ')[0]);
+                if (order === 'asc') {
+                    return priceA - priceB;
+                } else {
+                    return priceB - priceA;
+                }
+            });
+            products.forEach(function(product) {
+                productsContainer.appendChild(product);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="cart" id="cartModal">
+        <button id="cancelCart">Cancel</button>
+        <button id="placeOrder">Place order</button>
+        <div id="cart-container"></div>
+    </div>
+    <header>
+        <div class="logo">
+           <img src="images/Logo.png" alt="BGI BuildMart Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button id="openCart"><img src="images/cart-icon.png" alt="Cart"></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="category-buttons">
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('paint')">Paints</button>
+            <button onclick="filterProducts('tile-glue')">Tile Glues</button>
+            <button onclick="filterProducts('cement')">Cement</button>
+        </div>
+        <div>
+            <label for="sort">Sort by:</label>
+            <select id="sort" onchange="sortProductsByPrice(this.value)">
+                <option value="asc">Price (Low to High)</option>
+                <option value="desc">Price (High to Low)</option>
+            </select>
+        </div>
+        <section id="products-container">
+            <section id="paints">
+            </section>
+            <section id="tile-glues">
+            </section>
+            <section id="cement">
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 BGI BuildMart. All rights reserved.</p>
+    </footer>
+</body>
+<script src="./products.js"></script>
+<script src="./cart.js"></script>
+</html>

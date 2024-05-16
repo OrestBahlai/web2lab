@@ -1,0 +1,69 @@
+@charset "UTF-8";
+#cartModal {
+  position: absolute;
+  display: none;
+  width: 30%; /* зменшили ширину вікна */
+  height: 80%; /* зменшили висоту вікна */
+  background-color: #f8f9fa; /* світлий сірий тон */
+  z-index: 1000;
+  top: 50%; /* змінили положення по вертикалі */
+  left: 50%; /* змінили положення по горизонталі */
+  transform: translate(-50%, -50%); /* центруємо вікно */
+  padding: 20px;
+  border-radius: 10px; /* більш округлі кути */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* м'яка тінь */
+}
+
+#cartModal button {
+  position: absolute;
+  bottom: 10px; /* розміщуємо кнопку знизу */
+  right: 10px; /* розміщуємо кнопку зправа */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px; /* збільшуємо розмір шрифту */
+}
+
+#cartModal #placeOrder {
+  background-color: #333; /* синій колір вашого сайту */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  right: 120px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* плавна анімація */
+}
+
+#cartModal #cancelCart {
+  position: absolute;
+  bottom: 10px; /* розміщуємо кнопку знизу */
+  right: 20px; /* розміщуємо кнопку правіше від "Place order" */
+  background-color: #960000;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px; /* збільшуємо розмір шрифту */
+  transition: background-color 0.3s ease; /* плавна анімація */
+}
+
+#cartModal #placeOrder:hover {
+  background-color: #555; /* зміна кольору при наведенні */
+}
+
+#cartModal #cancelCart:hover {
+  background-color: #c10404; /* зміна кольору при наведенні */
+}
+
+#cart-container {
+  overflow-y: auto;
+  max-height: calc(100% - 40px); /* обмежуємо висоту контейнера */
+  margin: 0 auto; /* вирівнюємо по горизонталі */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* вирівнюємо товари по вертикалі */
+  align-items: center; /* вирівнюємо товари по горизонталі */
+  text-align: center; /* вирівнюємо текст по центру */
+}/*# sourceMappingURL=styles_cart.css.map */
